@@ -4,10 +4,13 @@ const Display = props => {
     return (
         <div className='display'>
         <div className='balls-count'>
-            Balls
+            Balls: {props.ball}
         </div>
         <div className='strikes-count'>
-            Strikes
+            Strikes: {props.strike}
+        </div>
+        <div className='hits-count'>
+            Hits: {props.hit}
         </div>
         </div>
     )

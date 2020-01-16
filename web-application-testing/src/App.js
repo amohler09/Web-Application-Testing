@@ -1,24 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Display from './components/Display'
 import Dashboard from './components/Dashboard';
 
 
-class App extends React.Component {
 
-  state = {
-    strikes: '0',
-    balls: '0',
-    fouls: '0',
-    hits: '0'
-  }
+function App() {
+  const [strike, setStrike] = useState(0);
+  const [ball, setBall] = useState(0);
+  const [hit, setHit] = useState(0);
 
-  render() {
+  
   return (
     <div className="App">
-      <Display />
+      <Display 
+      strikes={strike}
+      balls={ball}
+      hit={hit} />
       <Dashboard />
     </div>
   );
-}}
+  }
+  export default App;
 
-export default App;
