@@ -1,44 +1,27 @@
 import React from 'react'
+import {addBall} from '../utils/addBall'
+import {addFoul} from '../utils/addFoul'
+import {addHit} from '../utils/addHit'
+import {addStrike} from '../utils/addStrike'
+
 
 
 const Dashboard = props => {
-    const hit = hit => {
-        return hit + 1
-    }
-
-    const strike = strike => {
-        if (strike < 3) {
-            return strike + 1
-        } else return 0
-    }
-
-    const ball = ball => {
-        if (ball < 4) {
-            return ball + 1
-        } else return 0
-    }
-
-    const foul = strike => {
-        if (strike === 0 ) {
-            return strike + 1
-        } else if (strike === 1) {
-            return strike + 1
-        } else return strike
-    }
+    
     
     return (
         <div className='dashboard'>
             <button className='strike' 
-            onClick={() => props.setStrike(strike)}
+            onClick={() => props.setStrike(addStrike)}
             >Strike!</button>
             <button className='ball' 
-            onClick={() => props.setBall(ball)}
+            onClick={() => props.setBall(addBall)}
             >Ball</button>
             <button className='foul' 
-            onClick={() => props.setStrike(foul)}
+            onClick={() => props.setStrike(addFoul)}
             >Foul</button>
             <button className='hit' 
-            onClick={() => props.setHit(hit)}
+            onClick={() => props.setHit(addHit)}
             >Hit!</button>
         </div>
     )
