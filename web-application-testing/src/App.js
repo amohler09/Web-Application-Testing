@@ -13,10 +13,13 @@ function App() {
   return (
     <div className="App">
       <Display 
-      strikes={strike}
-      balls={ball}
+      strike={strike}
+      ball={ball}
       hit={hit} />
-      <Dashboard />
+      <Dashboard 
+      setStrike={setStrike}
+      setHit={setHit}
+      setBall={setBall}/>
     </div>
   );
   }

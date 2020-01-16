@@ -3,11 +3,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 import {strike, ball, fould} from './components/utils'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
 
 test('keeps count of strikes', () => {
   expect(strike(0)).toBe(0);
