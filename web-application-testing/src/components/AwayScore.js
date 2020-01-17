@@ -3,14 +3,21 @@ import {addBall} from '../utils/addBall'
 import {addFoul} from '../utils/addFoul'
 import {addHit} from '../utils/addHit'
 import {addStrike} from '../utils/addStrike'
+import styled from 'styled-components'
 
+const AwayScoreDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 15%;
+    margin-top: 5%;
+`;
 
-
-const Dashboard = props => {
+const AwayScore = props => {
     
     
     return (
-        <div className='dashboard'>
+        <AwayScoreDiv>
             <button className='strike' 
             onClick={() => props.setStrike(addStrike)}
             >Strike!</button>
@@ -23,8 +30,8 @@ const Dashboard = props => {
             <button className='hit' 
             onClick={() => props.setHit(addHit)}
             >Hit!</button>
-        </div>
+        </AwayScoreDiv>
     )
 }
 
-export default Dashboard;
+export default AwayScore;

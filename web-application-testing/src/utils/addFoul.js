@@ -4,5 +4,10 @@ export const addFoul = strike => {
         return strike + 1
     } else if (strike === 1) {
         return strike + 1
-    } else return strike
+    } else return strike;
+}
+
+export const Foul = foul => {
+    return foul + 1;
+    
 }
